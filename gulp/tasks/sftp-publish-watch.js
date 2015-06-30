@@ -10,7 +10,7 @@ var sftpOptions = require('../../sftp-credentials.js');
 
 var dest = 'sftp-build';
 
-gulp.task('sftp-publish-watch', ['watch'], function() {
+gulp.task('sftp-publish-watch', function() {
   return gulp.src('./build/**')
     .pipe(changed(dest)) // Ignore unchanged files
     .pipe(sftp(sftpOptions))

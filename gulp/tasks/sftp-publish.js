@@ -9,8 +9,6 @@ var _ = require('lodash');
 
 var sftpOptions = require('../../sftp-credentials.js');
 
-gutil.log(sftpOptions);
-
 var dest = 'sftp-build';
 
 gulp.task('sftp-publish', ['build'], function() {

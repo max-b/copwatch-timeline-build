@@ -3,6 +3,7 @@ var source    = require('vinyl-source-stream');
 var stream    = require('stream');
 var gulp       = require('gulp');
 var notify     = require('gulp-notify');
+var gulpWait = require('gulp-wait');
 var config     = require('../../config.js');
 var Q = require('q');
 var gutil = require('gulp-util');
@@ -28,6 +29,7 @@ gulp.task('json-conversion', function() {
 
         resultStream.pipe(source('timeline_data.json'))
                           .pipe(gulp.dest(dest))
+                          .pipe(gulpWait(1500)) // hopefully allows images to be finished
                           .pipe(notify());
                           
         deferred.resolve();
