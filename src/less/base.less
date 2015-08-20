@@ -1,0 +1,141 @@
+@link-color: #0033bb;
+@link-color-alt: #003399;
+
+a, a:visited {
+  color: @link-color;
+  text-decoration: none;
+}
+
+
+a:hover {
+  color: @link-color-alt;
+  text-decoration: none;
+}
+
+.title-container {
+  text-align: center;
+  margin: auto;
+  max-width: 1200px;
+
+  .title {
+    font-weight: bold;
+    font-size: 48px;
+    font-size: 3rem;
+    line-height: 30px;
+    line-height: 1.875rem;
+    font-weight: 700;
+    font-family: "Bevan",georgia,"times new roman",times,serif;
+  }
+
+  .subtitle {
+    font-weight: bold;
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 2.42rem;
+    font-weight: 700;
+    font-family: 'Pontano Sans', sans-serif;
+  }
+}
+.citation {
+  cursor: pointer;
+  color: @link-color;
+}
+
+.quotation {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.vco-storyjs {
+  .content {
+    .text {
+
+      small {
+        color: #555;
+      }
+
+      p {
+        color: #333;
+        font-size: 18px;
+      }
+    }
+
+    .marker {
+      .flag {
+        .flag-content {
+        }
+      }
+    }
+  }
+}
+
+.summary {
+  max-width: 1200px;
+  margin: 20px auto 20px auto;
+
+  h1 {
+    font-weight: bold;
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 2.42rem;
+    font-weight: 700;
+    font-family: 'Pontano Sans', sans-serif;
+  }
+
+  .content {
+
+    li {
+      padding: 10px 0;
+    }
+
+    .embed-container {
+
+      .title {
+        font-weight: bold;
+        font-size: 16px;
+        font-size: 1rem;
+        font-weight: 700;
+        font-family: 'Pontano Sans', sans-serif;
+        text-align: center;
+        margin: 10px auto;
+      }
+
+    }
+
+    .embed-container.inline {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    .embed-container.pincus {
+      width: 350px;
+    }
+
+    .embed-container.right {
+      float: right;
+      padding-left: 20px;
+    }
+
+    .embed-container.left {
+      float: left;
+    }
+
+    .embed-container.twitter {
+      max-width: 300px;
+    }
+
+    .embed-container.twitter.full-width {
+      max-width: 100%;
+    }
+
+    p {
+
+    }
+  }
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}

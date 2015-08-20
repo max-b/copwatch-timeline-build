@@ -4,6 +4,7 @@ var stream    = require('stream');
 var gulp       = require('gulp');
 var notify     = require('gulp-notify');
 var gulpWait = require('gulp-wait');
+var gutil = require('gulp-util');
 var config     = require('../../config.js');
 var Q = require('q');
 var gutil = require('gulp-util');
@@ -28,8 +29,10 @@ gulp.task('json-conversion', function() {
         resultStream.push(null);
 
         resultStream.pipe(source('timeline_data.json'))
+                          .on('error', gutil.log)
                           .pipe(gulp.dest(dest))
-                          .pipe(gulpWait(1500)) // hopefully allows images to be finished
+                          .on('error', gutil.log)
+                          .pipe(gulpWait(4000)) // hopefully allows images to be finished
                           .pipe(notify());
                           
         deferred.resolve();
