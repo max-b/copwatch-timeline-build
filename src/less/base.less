@@ -30,9 +30,10 @@ a:hover {
   .subtitle {
     font-weight: bold;
     font-size: 32px;
-    font-size: 2rem;
-    line-height: 2.42rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 32px;
+    line-height: 2rem;
+    font-weight: 400;
     font-family: 'Pontano Sans', sans-serif;
   }
 }
@@ -57,6 +58,9 @@ a:hover {
       p {
         color: #333;
         font-size: 18px;
+        font-size: 1.1rem;
+        line-height: 32px;
+        line-height: 2rem;
       }
     }
 
@@ -72,6 +76,28 @@ a:hover {
 .summary {
   max-width: 1200px;
   margin: 20px auto 20px auto;
+  font-family: 'Pontano Sans', sans-serif;
+
+  ol.outermost-list > li h3,
+  ol.outermost-list > li {
+    font-family: "Bevan",georgia,"times new roman",times,serif;
+    font-weight: 500;
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+
+  ol.outermost-list > li * {
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  h4 {
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
 
   h1 {
     font-weight: bold;
@@ -79,10 +105,13 @@ a:hover {
     font-size: 2rem;
     line-height: 2.42rem;
     font-weight: 700;
-    font-family: 'Pontano Sans', sans-serif;
   }
 
   .content {
+
+    ul.no-decoration {
+      list-style-type: none;
+    }
 
     li {
       padding: 10px 0;
