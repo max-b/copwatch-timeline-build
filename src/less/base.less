@@ -17,7 +17,7 @@ a:hover {
   margin: auto;
   max-width: 1200px;
 
-  .title {
+  .title,.summary-jump-button {
     font-weight: bold;
     font-size: 48px;
     font-size: 3rem;
@@ -28,6 +28,9 @@ a:hover {
   }
 
   .subtitle {
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px;
     font-weight: bold;
     font-size: 32px;
     font-size: 1.5rem;
@@ -35,6 +38,45 @@ a:hover {
     line-height: 2rem;
     font-weight: 400;
     font-family: 'Pontano Sans', sans-serif;
+    @media screen {
+      max-width: 500px;
+      @media (min-width: 1100px) {
+        max-width: 600px;
+      }
+    }
+  }
+  
+  .summary-jump-button {
+    color: lighten(#000, 40%);
+    cursor: pointer;
+    position: absolute;
+    text-align: right;
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 32px;
+    line-height: 2rem;
+    font-weight: 300;
+    max-width: 15rem;
+    padding: 10px;
+    z-index: 200;
+    @media screen {
+      top: 200px;
+      right: 20px;
+      .summary-jump-text {
+        display: none;
+      }
+      @media (min-width: 1000px) {
+        top: 175px;
+        right: 0;
+        .summary-jump-text {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  .summary-jump-button:hover {
+    color: #000;
   }
 }
 .citation {
@@ -93,7 +135,8 @@ a:hover {
     font-weight: 400;
   }
 
-  h4 {
+  h4,
+  ol.outermost-list > li h4 {
     font-family: 'Pontano Sans', sans-serif;
     font-size: 20px;
     font-size: 1.25rem;
