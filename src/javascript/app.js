@@ -5,6 +5,10 @@ $(function() {
   $('.summary-jump-button').on('click', function(event) {
     $('html,body').animate({ scrollTop: $('.summary').position().top });
   });
+  $('.feedback-jump-button').off('click');
+  $('.feedback-jump-button').on('click', function(event) {
+    $('html,body').animate({ scrollTop: $('#feedback-section').position().top });
+  });
   $('.slideshow-link').on('click', function(event) {
     event.preventDefault();
     var linkId = $(this).data('link');

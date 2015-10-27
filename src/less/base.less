@@ -17,7 +17,7 @@ a:hover {
   margin: auto;
   max-width: 1200px;
 
-  .title,.summary-jump-button {
+  .title,.jump-button {
     font-weight: bold;
     font-size: 48px;
     font-size: 3rem;
@@ -46,7 +46,7 @@ a:hover {
     }
   }
   
-  .summary-jump-button {
+  .jump-button {
     color: lighten(#000, 40%);
     cursor: pointer;
     position: absolute;
@@ -59,23 +59,43 @@ a:hover {
     max-width: 15rem;
     padding: 10px;
     z-index: 200;
+  }
+  
+  .feedback-jump-button {
+    @media screen {
+      top: 200px;
+      left: 20px;
+      .jump-text {
+        display: none;
+      }
+      @media (min-width: 1000px) {
+        top: 175px;
+        left: 0;
+        .jump-text {
+          display: inline;
+        }
+      }
+    }
+  }
+ 
+  .summary-jump-button {
     @media screen {
       top: 200px;
       right: 20px;
-      .summary-jump-text {
+      .jump-text {
         display: none;
       }
       @media (min-width: 1000px) {
         top: 175px;
         right: 0;
-        .summary-jump-text {
+        .jump-text {
           display: inline;
         }
       }
     }
   }
 
-  .summary-jump-button:hover {
+  .jump-button:hover {
     color: #000;
   }
 }
